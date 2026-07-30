@@ -1,5 +1,5 @@
-const CACHE = 'burbujas-amor-v4';
-const SHELL = ['./', './index.html', './styles.css', './messages.js', './app.js', './manifest.webmanifest', './icon.svg'];
+const CACHE = 'burbujas-amor-v5';
+const SHELL = ['./', './index.html', './styles.css', './direct-link.js', './messages.js', './app.js', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)));

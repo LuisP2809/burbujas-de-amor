@@ -20,3 +20,27 @@
     return originalShowModal.call(this);
   };
 })();
+
+(() => {
+  const form = document.getElementById('nameForm');
+  if (!form) return;
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    const input = document.getElementById('nameInput');
+    const selectedName = input?.value || 'Dally';
+
+    if (typeof applyName === 'function') applyName(selectedName);
+
+    const createButton = form.querySelector('button[type="submit"]');
+    if (createButton) {
+      const originalText = 'Crear sorpresa';
+      createButton.textContent = 'Sorpresa creada ✓';
+      window.setTimeout(() => {
+        createButton.textContent = originalText;
+      }, 1800);
+    }
+  }, true);
+})();

@@ -1,0 +1,20 @@
+{
+  "name": "Burbujas de Amor",
+  "short_name": "Burbujas",
+  "description": "Una experiencia interactiva llena de burbujas y mensajes especiales.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#110925",
+  "theme_color": "#4c1d95",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

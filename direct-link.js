@@ -22,25 +22,19 @@
 })();
 
 (() => {
-  const form = document.getElementById('nameForm');
-  if (!form) return;
+  const createButton = document.getElementById('createSurprise');
+  const input = document.getElementById('nameInput');
 
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    event.stopImmediatePropagation();
+  if (!createButton || !input) return;
 
-    const input = document.getElementById('nameInput');
-    const selectedName = input?.value || 'Dally';
+  createButton.addEventListener('click', () => {
+    const selectedName = input.value || 'Dally';
 
     if (typeof applyName === 'function') applyName(selectedName);
 
-    const createButton = form.querySelector('button[type="submit"]');
-    if (createButton) {
-      const originalText = 'Crear sorpresa';
-      createButton.textContent = 'Sorpresa creada ✓';
-      window.setTimeout(() => {
-        createButton.textContent = originalText;
-      }, 1800);
-    }
-  }, true);
+    createButton.textContent = 'Sorpresa creada ✓';
+    window.setTimeout(() => {
+      createButton.textContent = 'Crear sorpresa';
+    }, 1800);
+  });
 })();

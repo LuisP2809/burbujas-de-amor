@@ -71,14 +71,14 @@
       <p class="eyebrow">Personaliza la experiencia</p>
       <h2 id="welcomeTitle">Una sorpresa para Dally</h2>
       <p>Escribe un nombre para crear una versión personalizada y compartirla mediante un enlace.</p>
-      <form class="name-form" id="nameForm">
+      <div class="name-form" id="nameForm">
         <label for="nameInput">Nombre de la persona</label>
         <div class="name-row">
           <input id="nameInput" maxlength="28" autocomplete="off" placeholder="Ejemplo: Dally" value="Dally">
-          <button class="primary" type="submit">Crear sorpresa</button>
+          <button class="primary" id="createSurprise" type="button">Crear sorpresa</button>
         </div>
         <p class="helper">Si dejas el campo vacío, se usará el nombre Dally.</p>
-      </form>
+      </div>
       <div id="linkResult" class="link-result"></div>
       <div class="actions">
         <button class="secondary" id="copyLink" type="button">Copiar enlace</button>

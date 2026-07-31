@@ -1,4 +1,4 @@
-const CACHE = 'burbujas-amor-v5';
+const CACHE = 'burbujas-amor-v6';
 const SHELL = ['./', './index.html', './styles.css', './direct-link.js', './messages.js', './app.js', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', event => {
